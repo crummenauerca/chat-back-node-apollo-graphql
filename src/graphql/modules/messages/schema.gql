@@ -1,0 +1,26 @@
+scalar Date
+type Message {
+  _id: ID!
+  author: User!
+  content: String!
+  createdAt: Date!
+}
+
+type Query {
+  messages: [Message!]!
+  message(id: ID!): Message!
+}
+
+input MessageInput {
+  content: String!
+  author: ID!
+}
+
+type Mutation {
+  createMessage(data: MessageInput!): Message!
+  deleteMessage(id: ID!): Boolean!
+}
+
+type Subscription {
+  newMessage: Message!
+}

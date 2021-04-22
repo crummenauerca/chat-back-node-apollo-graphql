@@ -1,0 +1,24 @@
+type User {
+  _id: ID!
+  nickname: String!
+  isActive: Boolean!
+}
+
+type Query {
+  users: [User!]!
+  user(id: ID!): User!
+}
+
+input UserInput {
+  nickname: String!
+}
+
+type Mutation {
+  login(data: UserInput!): User!
+  logout(data: UserInput!): User!
+}
+
+type Subscription {
+  userLoggedIn: User!
+  userLoggedOut: User!
+}
