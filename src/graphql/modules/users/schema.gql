@@ -19,6 +19,5 @@ type Mutation {
 }
 
 type Subscription {
-  userLoggedIn: User!
-  userLoggedOut: User!
+  userStatusChanged: User!
 }

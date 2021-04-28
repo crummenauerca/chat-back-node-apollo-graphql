@@ -1,10 +1,10 @@
 {
-  "name": "graphql2",
+  "name": "chat-back-node-apollo-graphql",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "npx nodemon --exec babel-node src/index.js -e js,gql"
+    "start": "npx nodemon --exec babel-node src/index.js -e js,gql"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.16",
